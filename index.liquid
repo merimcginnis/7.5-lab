@@ -1,7 +1,9 @@
 ---
 layout: layout.liquid
-title: Home
+title: 11ty Boilerplate
 ---
+
+<h1>Yet Another 11ty <strong>Boilerplate</strong></h1>
 
 
 <div class="max-w-4xl mx-auto p-6">
@@ -16,7 +18,7 @@ title: Home
           .then(data => users = data.results)">
         
         <template x-for="user in users" :key="user.login.uuid">
-          <div class="flex items-center p-3 border-b">
+          <div class="flex items-center p-3 border-b border-gray-200">
             <img :src="user.picture.medium" alt="User Image" class="w-12 h-12 rounded-full mr-4">
             <div>
               <p class="text-lg font-medium" x-text="user.name.first + ' ' + user.name.last"></p>
@@ -36,7 +38,9 @@ title: Home
           .then(response => response.json())
           .then(data => dogImage = data.message)">
         
-        <img :src="dogImage" alt="Random Dog" class="rounded shadow-lg mx-auto w-64">
+        <div class="flex justify-center">
+          <img :src="dogImage" alt="Random Dog" class="rounded shadow-lg max-w-full h-auto">
+        </div>
       </div>
     </section>
 
