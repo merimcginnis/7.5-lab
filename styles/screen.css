@@ -1,4 +1,4 @@
- /*! tailwindcss v4.0.9 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v4.0.9 | MIT License | https://tailwindcss.com */
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -160,6 +160,27 @@
   [hidden]:where(:not([hidden="until-found"])) {
     display: none !important;
   }
+  .text-gold {
+    color: #FFD700;
+  }
+  .bg-gold {
+    background-color: #FFD700;
+  }
+  .bg-black {
+    background-color: #000000;
+  }
+  .bg-gray-800 {
+    background-color: #1a1a1a;
+  }
+  .bg-gray-900 {
+    background-color: #1a1a1a;
+  }
+  .border-gray-700 {
+    border-color: #2d2d2d;
+  }
+  .text-gray-400 {
+    color: #b3b3b3;
+  }
 }
 @layer utilities {
   .collapse {
@@ -205,9 +226,9 @@
   }
 }
 body {
-  font-family: Helvetica, sans-serif;
-  color: #EAE8FF;
-  background: #2D3142;
+  font-family: 'Helvetica Neue', sans-serif;
+  color: #FFD700; /* Gold color */
+  background: #000000; /* Black background */
   padding: 0 40px;
   text-align: center;
 }
@@ -215,7 +236,7 @@ nav {
   margin: 40px auto 0 auto;
   width: 250px;
   border-radius: 50px;
-  background: #212431;
+  background: #1a1a1a; /* Darker black for contrast */
 }
 nav ul {
   display: flex;
@@ -230,7 +251,7 @@ nav ul li {
 nav ul li a {
   display: inline-block;
   padding: 20px;
-  color: #EAE8FF;
+  color: #FFD700; /* Gold color */
   text-decoration: none;
   font-size: 1.2em;
 }
@@ -239,8 +260,7 @@ h1 {
   letter-spacing: -2px;
 }
 h1 strong {
-  background: rgb(34,193,195);
-  background: linear-gradient(45deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+  background: linear-gradient(45deg, #FFD700 0%, #FFB700 100%); /* Gold gradient */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -257,3 +277,6 @@ img.about {
   inherits: false;
   initial-value: solid;
 }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
